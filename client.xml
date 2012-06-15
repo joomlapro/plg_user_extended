@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="user">
+	<name>plg_user_client</name>
+	<author>Bruno Batista</author>
+	<creationDate>14/06/2012</creationDate>
+	<copyright>(C) 2012 AtomTech, Inc. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>bruno@atomtech.com.br</authorEmail>
+	<authorUrl>http://www.atomtech.com.br</authorUrl>
+	<version>2.5.0</version>
+	<description>PLG_CLIENT_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="client">client.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<languages>
+		<language tag="pt-BR">pt-BR.plg_user_client.ini</language>
+		<language tag="pt-BR">pt-BR.plg_user_client.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+		</fields>
+	</config>
+</extension>
