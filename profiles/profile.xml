@@ -30,9 +30,6 @@
 			<field id="fantasy" name="fantasy" type="text" filter="string" size="30" label="PLG_USER_CLIENT_FIELD_FANTASY_LABEL" description="PLG_USER_CLIENT_FIELD_FANTASY_DESC" />
 			<field id="cnpj" name="cnpj" type="text" class="cnpj" filter="string" size="30" label="PLG_USER_CLIENT_FIELD_CNPJ_LABEL" description="PLG_USER_CLIENT_FIELD_CNPJ_DESC" />
 			<field id="ie" name="ie" type="text" filter="string" size="30" label="PLG_USER_CLIENT_FIELD_IE_LABEL" description="PLG_USER_CLIENT_FIELD_IE_DESC" />
-			<field id="activity" name="activity" type="activity" label="PLG_USER_CLIENT_FIELD_ACTIVITY_LABEL" description="PLG_USER_CLIENT_FIELD_ACTIVITY_DESC">
-				<option value="">JSELECT</option>
-			</field>
 			<field id="phone2" name="phone2" type="tel" class="phone" filter="string" label="PLG_USER_CLIENT_FIELD_PHONE_LABEL" description="PLG_USER_CLIENT_FIELD_PHONE_DESC" />
 			<field id="website" name="website" type="url" label="PLG_USER_CLIENT_FIELD_WEBSITE_LABEL" description="PLG_USER_CLIENT_FIELD_WEBSITE_DESC" />
 			<field name="featured" type="hidden" filter="unset" />

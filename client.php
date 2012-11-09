@@ -111,11 +111,6 @@ class PlgUserClient extends JPlugin
 			{
 				JHtml::register('users.state', array(__CLASS__, 'state'));
 			}
-
-			if (!JHtml::isRegistered('users.activity'))
-			{
-				JHtml::register('users.activity', array(__CLASS__, 'activity'));
-			}
 		}
 
 		return true;
@@ -252,32 +247,6 @@ class PlgUserClient extends JPlugin
 	}
 
 	/**
-	 * Activity field.
-	 *
-	 * @param   int  $value  The value.
-	 *
-	 * @return  string
-	 *
-	 * @since   1.6
-	 */
-	public static function activity($value)
-	{
-		// Initialiase variables.
-		$db = JFactory::getDbo();
-		$query = $db->getQuery(true);
-
-		// Prepare query.
-		$query->select('a.name');
-		$query->from('#__products_activities AS a');
-		$query->where('a.id = ' . (int) $value);
-
-		// Inject the query and load the result.
-		$db->setQuery($query);
-
-		return $db->loadResult();
-	}
-
-	/**
 	 * Called before a JForm is rendered.
 	 *
 	 * It can be used to modify the JForm object in memory before rendering.
@@ -326,7 +295,6 @@ class PlgUserClient extends JPlugin
 			'fantasy',
 			'cnpj',
 			'ie',
-			'activity',
 			'phone2',
 			'website',
 			'featured',

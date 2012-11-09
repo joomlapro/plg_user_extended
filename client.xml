@@ -102,11 +102,6 @@
 					<option value="1">JOPTION_OPTIONAL</option>
 					<option value="0">JDISABLED</option>
 				</field>
-				<field name="register-require_activity" type="list" label="PLG_USER_CLIENT_FIELD_ACTIVITY_LABEL" description="PLG_USER_CLIENT_FIELD_ACTIVITY_DESC">
-					<option value="2">JOPTION_REQUIRED</option>
-					<option value="1">JOPTION_OPTIONAL</option>
-					<option value="0">JDISABLED</option>
-				</field>
 				<field name="register-require_phone2" type="list" label="PLG_USER_CLIENT_FIELD_PHONE_LABEL" description="PLG_USER_CLIENT_FIELD_PHONE_DESC">
 					<option value="2">JOPTION_REQUIRED</option>
 					<option value="1">JOPTION_OPTIONAL</option>
@@ -195,11 +190,6 @@
 					<option value="0">JDISABLED</option>
 				</field>
 				<field name="profile-require_ie" type="list" label="PLG_USER_CLIENT_FIELD_IE_LABEL" description="PLG_USER_CLIENT_FIELD_IE_DESC">
-					<option value="2">JOPTION_REQUIRED</option>
-					<option value="1">JOPTION_OPTIONAL</option>
-					<option value="0">JDISABLED</option>
-				</field>
-				<field name="profile-require_activity" type="list" label="PLG_USER_CLIENT_FIELD_ACTIVITY_LABEL" description="PLG_USER_CLIENT_FIELD_ACTIVITY_DESC">
 					<option value="2">JOPTION_REQUIRED</option>
 					<option value="1">JOPTION_OPTIONAL</option>
 					<option value="0">JDISABLED</option>

@@ -3,6 +3,10 @@ Plugin User Client for Joomla! 3.0
 
 Example of plugin for registering users fields in other tables.
 
+## Installation
+
+Just download and install (In example.sql, have a example of database to import).
+
 ## Authors
 
 * Bruno Batista
