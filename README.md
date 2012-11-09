@@ -1,7 +1,7 @@
-Plugin User Client
-==================
+Plugin User Client for Joomla! 3.0
+==================================
 
-Example of plugin for registering users in other tables
+Example of plugin for registering users fields in other tables.
 
 ## Authors
 
