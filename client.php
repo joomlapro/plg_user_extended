@@ -12,6 +12,7 @@ defined('JPATH_BASE') or die;
 // Add JavaScript Frameworks.
 JHtml::_('jquery.framework');
 
+// Load JavaScript.
 JHtml::script('com_products/jquery.maskedinput.min.js', false, true);
 JHtml::script('com_products/jquery.maskmoney.min.js', false, true);
 JHtml::script('com_products/jquery.custom.js', false, true);
@@ -37,7 +38,7 @@ class PlgUserClient extends JPlugin
 	public function __construct(&$subject, $config)
 	{
 		parent::__construct($subject, $config);
-		$this->loadLanguage();
+
 		JFormHelper::addFieldPath(__DIR__ . '/fields');
 	}
 

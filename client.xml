@@ -14,9 +14,9 @@
 		<filename>index.html</filename>
 		<folder>profiles</folder>
 	</files>
-	<languages>
-		<language tag="pt-BR">pt-BR.plg_user_client.ini</language>
-		<language tag="pt-BR">pt-BR.plg_user_client.sys.ini</language>
+	<languages folder="language">
+		<language tag="pt-BR">pt-BR/pt-BR.plg_user_client.ini</language>
+		<language tag="pt-BR">pt-BR/pt-BR.plg_user_client.sys.ini</language>
 	</languages>
 	<config>
 		<fields name="params">
