@@ -13,9 +13,8 @@ defined('JPATH_BASE') or die;
 JHtml::_('jquery.framework');
 
 // Load JavaScript.
-JHtml::script('com_products/jquery.maskedinput.min.js', false, true);
-JHtml::script('com_products/jquery.maskmoney.min.js', false, true);
-JHtml::script('com_products/jquery.custom.js', false, true);
+JHtml::script('plg_user_client/jquery.meio.mask.min.js', false, true);
+JHtml::script('plg_user_client/jquery.custom.js', false, true);
 
 /**
  * Joomla Client plugin.
