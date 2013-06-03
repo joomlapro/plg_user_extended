@@ -39,6 +39,8 @@ class PlgUserClient extends JPlugin
 	{
 		parent::__construct($subject, $config);
 
+		$this->loadLanguage();
+
 		JFormHelper::addFieldPath(__DIR__ . '/fields');
 	}
 
