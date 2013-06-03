@@ -20,6 +20,10 @@
 		<language tag="pt-BR">pt-BR/pt-BR.plg_user_client.ini</language>
 		<language tag="pt-BR">pt-BR/pt-BR.plg_user_client.sys.ini</language>
 	</languages>
+	<media destination="plg_user_client" folder="media">
+		<folder>js</folder>
+		<filename>index.html</filename>
+	</media>
 	<config>
 		<fields name="params">
 			<fieldset name="basic" addfieldpath="/administrator/components/com_content/models/fields">
