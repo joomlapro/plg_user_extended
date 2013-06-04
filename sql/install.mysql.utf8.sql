@@ -1,4 +1,4 @@
-CREATE TABLE `#__products_clients` (
+CREATE TABLE `#__users_extended` (
   `user_id` int(10) unsigned NOT NULL DEFAULT '0',
   `type` tinyint(1) unsigned NOT NULL DEFAULT '0',
   `cpf` char(14) NOT NULL DEFAULT '',

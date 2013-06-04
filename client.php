@@ -72,7 +72,7 @@ class PlgUserClient extends JPlugin
 				// Load the profile data from the database.
 				$db = JFactory::getDbo();
 				$db->setQuery(
-					'SELECT * FROM #__products_clients WHERE user_id = ' . (int) $userId
+					'SELECT * FROM #__users_extended WHERE user_id = ' . (int) $userId
 				);
 
 				try
@@ -369,7 +369,7 @@ class PlgUserClient extends JPlugin
 			{
 				$db = JFactory::getDbo();
 				$db->setQuery(
-					'DELETE FROM #__products_clients WHERE user_id = ' . (int) $userId
+					'DELETE FROM #__users_extended WHERE user_id = ' . (int) $userId
 				);
 				$db->execute();
 
@@ -385,7 +385,7 @@ class PlgUserClient extends JPlugin
 					$values[] = '"' . $v . '"';
 				}
 
-				$db->setQuery('INSERT INTO #__products_clients (user_id, ' . implode(', ', $keys) . ') VALUES ("' . $userId . '", ' . implode(', ', $values) . ')');
+				$db->setQuery('INSERT INTO #__users_extended (user_id, ' . implode(', ', $keys) . ') VALUES ("' . $userId . '", ' . implode(', ', $values) . ')');
 				$db->execute();
 			}
 			catch (RuntimeException $e)
@@ -426,7 +426,7 @@ class PlgUserClient extends JPlugin
 			{
 				$db = JFactory::getDbo();
 				$db->setQuery(
-					'DELETE FROM #__products_clients WHERE user_id = ' . (int) $userId
+					'DELETE FROM #__users_extended WHERE user_id = ' . (int) $userId
 				);
 
 				$db->execute();
