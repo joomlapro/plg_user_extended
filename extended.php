@@ -1,7 +1,7 @@
 <?php
 /**
  * @package     Joomla.Plugin
- * @subpackage  User.client
+ * @subpackage  User.Extended
  * @copyright   Copyright (C) 2012 AtomTech, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
@@ -13,17 +13,17 @@ defined('JPATH_BASE') or die;
 JHtml::_('jquery.framework');
 
 // Load JavaScript.
-JHtml::script('plg_user_client/jquery.meio.mask.min.js', false, true);
-JHtml::script('plg_user_client/jquery.custom.js', false, true);
+JHtml::script('plg_user_extended/jquery.meio.mask.min.js', false, true);
+JHtml::script('plg_user_extended/jquery.custom.js', false, true);
 
 /**
- * Joomla Client plugin.
+ * Joomla Extended plugin.
  *
  * @package     Joomla.Plugin
- * @subpackage  User.client
- * @since       1.6
+ * @subpackage  User.Extended
+ * @since       3.1
  */
-class PlgUserClient extends JPlugin
+class PlgUserExtended extends JPlugin
 {
 	/**
 	 * Constructor
@@ -32,7 +32,7 @@ class PlgUserClient extends JPlugin
 	 * @param   array   $config    An array that holds the plugin configuration.
 	 *
 	 * @access  protected
-	 * @since   1.5
+	 * @since   3.1
 	 */
 	public function __construct(&$subject, $config)
 	{
@@ -53,7 +53,7 @@ class PlgUserClient extends JPlugin
 	 *
 	 * @return  boolean
 	 *
-	 * @since   1.6
+	 * @since   3.1
 	 */
 	public function onContentPrepareData($context, $data)
 	{
@@ -125,7 +125,7 @@ class PlgUserClient extends JPlugin
 	 *
 	 * @return  string
 	 *
-	 * @since   1.6
+	 * @since   3.1
 	 */
 	public static function url($value)
 	{
@@ -154,7 +154,7 @@ class PlgUserClient extends JPlugin
 	 *
 	 * @return  string
 	 *
-	 * @since   1.6
+	 * @since   3.1
 	 */
 	public static function calendar($value)
 	{
@@ -175,18 +175,18 @@ class PlgUserClient extends JPlugin
 	 *
 	 * @return  string
 	 *
-	 * @since   1.6
+	 * @since   3.1
 	 */
 	public static function type($value)
 	{
 		switch ($value)
 		{
 			case '1':
-				return JText::_('PLG_USER_CLIENT_OPTION_INDIVIDUAL');
+				return JText::_('PLG_USER_EXTENDED_OPTION_INDIVIDUAL');
 				break;
 
 			case '2':
-				return JText::_('PLG_USER_CLIENT_OPTION_CORPORATE');
+				return JText::_('PLG_USER_EXTENDED_OPTION_CORPORATE');
 				break;
 
 			default:
@@ -202,18 +202,18 @@ class PlgUserClient extends JPlugin
 	 *
 	 * @return  string
 	 *
-	 * @since   1.6
+	 * @since   3.1
 	 */
 	public static function sex($value)
 	{
 		switch ($value)
 		{
 			case 'F':
-				return JText::_('PLG_USER_CLIENT_OPTION_FEMALE');
+				return JText::_('PLG_USER_EXTENDED_OPTION_FEMALE');
 				break;
 
 			case 'M':
-				return JText::_('PLG_USER_CLIENT_OPTION_MALE');
+				return JText::_('PLG_USER_EXTENDED_OPTION_MALE');
 				break;
 
 			default:
@@ -229,7 +229,7 @@ class PlgUserClient extends JPlugin
 	 *
 	 * @return  string
 	 *
-	 * @since   1.6
+	 * @since   3.1
 	 */
 	public static function state($value)
 	{
@@ -258,7 +258,7 @@ class PlgUserClient extends JPlugin
 	 *
 	 * @return  boolean
 	 *
-	 * @since   1.6
+	 * @since   3.1
 	 */
 	public function onContentPrepareForm($form, $data)
 	{
@@ -357,7 +357,7 @@ class PlgUserClient extends JPlugin
 	 *
 	 * @return  void
 	 *
-	 * @since   1.6
+	 * @since   3.1
 	 */
 	public function onUserAfterSave($data, $isNew, $result, $error)
 	{
@@ -409,7 +409,7 @@ class PlgUserClient extends JPlugin
 	 *
 	 * @return  boolean
 	 *
-	 * @since   1.6
+	 * @since   3.1
 	 */
 	public function onUserAfterDelete($user, $success, $msg)
 	{

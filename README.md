@@ -1,5 +1,5 @@
-Plugin User Client for Joomla! 3.0
-==================================
+Plugin User Extended for Joomla! 3.x
+====================================
 
 Example of plugin for registering users fields in other tables.
 
@@ -17,4 +17,4 @@ Licensed under the terms of the MIT license.
 
 ## Bugs/Requests
 
-* You can [report a bug or request a feature here](http://github.com/joomlapro/plg_user_client/issues)
+* You can [report a bug or request a feature here](http://github.com/joomlapro/plg_user_extended/issues)

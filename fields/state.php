@@ -1,12 +1,13 @@
 <?php
 /**
  * @package     Joomla.Plugin
- * @subpackage  User.client
- * @copyright   Copyright (C) 2005 - 2012 Open Source Matters, Inc. All rights reserved.
- * @license     GNU General Public License version 2 or later; see LICENSE
+ * @subpackage  System.Extended
+ * @copyright   Copyright (C) 2013 AtomTech, Inc. All rights reserved.
+ * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
-defined('JPATH_PLATFORM') or die;
+// No direct access.
+defined('_JEXEC') or die;
 
 JFormHelper::loadFieldClass('list');
 
@@ -15,7 +16,7 @@ JFormHelper::loadFieldClass('list');
  *
  * @package     Products
  * @subpackage  com_products
- * @since       1.6
+ * @since       3.1
  */
 class JFormFieldState extends JFormFieldList
 {
@@ -23,7 +24,7 @@ class JFormFieldState extends JFormFieldList
 	 * The form field type.
 	 *
 	 * @var     string
-	 * @since   1.6
+	 * @since   3.1
 	 */
 	protected $type = 'State';
 
@@ -32,7 +33,7 @@ class JFormFieldState extends JFormFieldList
 	 *
 	 * @return  array  The field option objects.
 	 *
-	 * @since   1.6
+	 * @since   3.1
 	 */
 	protected function getOptions()
 	{

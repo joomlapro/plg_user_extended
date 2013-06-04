@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <extension version="3.1" type="plugin" group="user" method="upgrade">
-	<name>plg_user_client</name>
+	<name>plg_user_extended</name>
 	<author>Bruno Batista</author>
 	<creationDate>November 2012</creationDate>
 	<copyright>(C) 2012 AtomTech, Inc. All rights reserved.</copyright>
@@ -8,8 +8,8 @@
 	<authorEmail>bruno@atomtech.com.br</authorEmail>
 	<authorUrl>http://www.atomtech.com.br</authorUrl>
 	<version>1.1</version>
-	<description>PLG_USER_CLIENT_XML_DESCRIPTION</description>
-	<scriptfile />
+	<description>PLG_USER_EXTENDED_XML_DESCRIPTION</description>
+	<scriptfile>script.php</scriptfile>
 	<!-- Runs on install. -->
 	<install>
 		<sql>
@@ -23,204 +23,204 @@
 		</sql>
 	</uninstall>
 	<files>
-		<filename plugin="client">client.php</filename>
+		<filename plugin="extended">extended.php</filename>
 		<filename>index.html</filename>
 		<folder>fields</folder>
 		<folder>profiles</folder>
 		<folder>sql</folder>
 	</files>
 	<languages folder="language">
-		<language tag="en-GB">en-GB/en-GB.plg_user_client.ini</language>
-		<language tag="en-GB">en-GB/en-GB.plg_user_client.sys.ini</language>
-		<language tag="pt-BR">pt-BR/pt-BR.plg_user_client.ini</language>
-		<language tag="pt-BR">pt-BR/pt-BR.plg_user_client.sys.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_user_extended.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_user_extended.sys.ini</language>
+		<language tag="pt-BR">pt-BR/pt-BR.plg_user_extended.ini</language>
+		<language tag="pt-BR">pt-BR/pt-BR.plg_user_extended.sys.ini</language>
 	</languages>
-	<media destination="plg_user_client" folder="media">
+	<media destination="plg_user_extended" folder="media">
 		<folder>js</folder>
 		<filename>index.html</filename>
 	</media>
 	<config>
 		<fields name="params">
 			<fieldset name="basic" addfieldpath="/administrator/components/com_content/models/fields">
-				<field name="register-require-user" type="spacer" class="text" label="PLG_USER_CLIENT_FIELD_NAME_REGISTER_REQUIRE_USER" />
-				<field name="register-require_type" type="list" label="PLG_USER_CLIENT_FIELD_TYPE_LABEL" description="PLG_USER_CLIENT_FIELD_TYPE_DESC">
+				<field name="register-require-user" type="spacer" class="text" label="PLG_USER_EXTENDED_FIELD_NAME_REGISTER_REQUIRE_USER" />
+				<field name="register-require_type" type="list" label="PLG_USER_EXTENDED_FIELD_TYPE_LABEL" description="PLG_USER_EXTENDED_FIELD_TYPE_DESC">
 					<option value="2">JOPTION_REQUIRED</option>
 					<option value="1">JOPTION_OPTIONAL</option>
 					<option value="0">JDISABLED</option>
 				</field>
-				<field name="register-require_cpf" type="list" label="PLG_USER_CLIENT_FIELD_CPF_LABEL" description="PLG_USER_CLIENT_FIELD_CPF_DESC">
+				<field name="register-require_cpf" type="list" label="PLG_USER_EXTENDED_FIELD_CPF_LABEL" description="PLG_USER_EXTENDED_FIELD_CPF_DESC">
 					<option value="2">JOPTION_REQUIRED</option>
 					<option value="1">JOPTION_OPTIONAL</option>
 					<option value="0">JDISABLED</option>
 				</field>
-				<field name="register-require_sex" type="list" label="PLG_USER_CLIENT_FIELD_SEX_LABEL" description="PLG_USER_CLIENT_FIELD_SEX_DESC">
+				<field name="register-require_sex" type="list" label="PLG_USER_EXTENDED_FIELD_SEX_LABEL" description="PLG_USER_EXTENDED_FIELD_SEX_DESC">
 					<option value="2">JOPTION_REQUIRED</option>
 					<option value="1">JOPTION_OPTIONAL</option>
 					<option value="0">JDISABLED</option>
 				</field>
-				<field name="register-require_birthday" type="list" label="PLG_USER_CLIENT_FIELD_BIRTHDAY_LABEL" description="PLG_USER_CLIENT_FIELD_BIRTHDAY_DESC">
+				<field name="register-require_birthday" type="list" label="PLG_USER_EXTENDED_FIELD_BIRTHDAY_LABEL" description="PLG_USER_EXTENDED_FIELD_BIRTHDAY_DESC">
 					<option value="2">JOPTION_REQUIRED</option>
 					<option value="1">JOPTION_OPTIONAL</option>
 					<option value="0">JDISABLED</option>
 				</field>
-				<field name="register-require_phone" type="list" label="PLG_USER_CLIENT_FIELD_PHONE_LABEL" description="PLG_USER_CLIENT_FIELD_PHONE_DESC">
+				<field name="register-require_phone" type="list" label="PLG_USER_EXTENDED_FIELD_PHONE_LABEL" description="PLG_USER_EXTENDED_FIELD_PHONE_DESC">
 					<option value="2">JOPTION_REQUIRED</option>
 					<option value="1">JOPTION_OPTIONAL</option>
 					<option value="0">JDISABLED</option>
 				</field>
-				<field name="register-require_mobile" type="list" label="PLG_USER_CLIENT_FIELD_MOBILE_LABEL" description="PLG_USER_CLIENT_FIELD_MOBILE_DESC">
+				<field name="register-require_mobile" type="list" label="PLG_USER_EXTENDED_FIELD_MOBILE_LABEL" description="PLG_USER_EXTENDED_FIELD_MOBILE_DESC">
 					<option value="2">JOPTION_REQUIRED</option>
 					<option value="1">JOPTION_OPTIONAL</option>
 					<option value="0">JDISABLED</option>
 				</field>
-				<field name="register-require_address_zip_code" type="list" label="PLG_USER_CLIENT_FIELD_ZIP_CODE_LABEL" description="PLG_USER_CLIENT_FIELD_ZIP_CODE_DESC">
+				<field name="register-require_address_zip_code" type="list" label="PLG_USER_EXTENDED_FIELD_ZIP_CODE_LABEL" description="PLG_USER_EXTENDED_FIELD_ZIP_CODE_DESC">
 					<option value="2">JOPTION_REQUIRED</option>
 					<option value="1">JOPTION_OPTIONAL</option>
 					<option value="0">JDISABLED</option>
 				</field>
-				<field name="register-require_address_street" type="list" label="PLG_USER_CLIENT_FIELD_STREET_LABEL" description="PLG_USER_CLIENT_FIELD_STREET_DESC">
+				<field name="register-require_address_street" type="list" label="PLG_USER_EXTENDED_FIELD_STREET_LABEL" description="PLG_USER_EXTENDED_FIELD_STREET_DESC">
 					<option value="2">JOPTION_REQUIRED</option>
 					<option value="1">JOPTION_OPTIONAL</option>
 					<option value="0">JDISABLED</option>
 				</field>
-				<field name="register-require_address_number" type="list" label="PLG_USER_CLIENT_FIELD_NUMBER_LABEL" description="PLG_USER_CLIENT_FIELD_NUMBER_DESC">
+				<field name="register-require_address_number" type="list" label="PLG_USER_EXTENDED_FIELD_NUMBER_LABEL" description="PLG_USER_EXTENDED_FIELD_NUMBER_DESC">
 					<option value="2">JOPTION_REQUIRED</option>
 					<option value="1">JOPTION_OPTIONAL</option>
 					<option value="0">JDISABLED</option>
 				</field>
-				<field name="register-require_address_district" type="list" label="PLG_USER_CLIENT_FIELD_DISTRICT_LABEL" description="PLG_USER_CLIENT_FIELD_DISTRICT_DESC">
+				<field name="register-require_address_district" type="list" label="PLG_USER_EXTENDED_FIELD_DISTRICT_LABEL" description="PLG_USER_EXTENDED_FIELD_DISTRICT_DESC">
 					<option value="2">JOPTION_REQUIRED</option>
 					<option value="1">JOPTION_OPTIONAL</option>
 					<option value="0">JDISABLED</option>
 				</field>
-				<field name="register-require_address_city" type="list" label="PLG_USER_CLIENT_FIELD_CITY_LABEL" description="PLG_USER_CLIENT_FIELD_CITY_DESC">
+				<field name="register-require_address_city" type="list" label="PLG_USER_EXTENDED_FIELD_CITY_LABEL" description="PLG_USER_EXTENDED_FIELD_CITY_DESC">
 					<option value="2">JOPTION_REQUIRED</option>
 					<option value="1">JOPTION_OPTIONAL</option>
 					<option value="0">JDISABLED</option>
 				</field>
-				<field name="register-require_address_state" type="list" label="PLG_USER_CLIENT_FIELD_STATE_LABEL" description="PLG_USER_CLIENT_FIELD_STATE_DESC">
+				<field name="register-require_address_state" type="list" label="PLG_USER_EXTENDED_FIELD_STATE_LABEL" description="PLG_USER_EXTENDED_FIELD_STATE_DESC">
 					<option value="2">JOPTION_REQUIRED</option>
 					<option value="1">JOPTION_OPTIONAL</option>
 					<option value="0">JDISABLED</option>
 				</field>
-				<field name="register-require_company" type="list" label="PLG_USER_CLIENT_FIELD_COMPANY_LABEL" description="PLG_USER_CLIENT_FIELD_COMPANY_DESC">
+				<field name="register-require_company" type="list" label="PLG_USER_EXTENDED_FIELD_COMPANY_LABEL" description="PLG_USER_EXTENDED_FIELD_COMPANY_DESC">
 					<option value="2">JOPTION_REQUIRED</option>
 					<option value="1">JOPTION_OPTIONAL</option>
 					<option value="0">JDISABLED</option>
 				</field>
-				<field name="register-require_fantasy" type="list" label="PLG_USER_CLIENT_FIELD_FANTASY_LABEL" description="PLG_USER_CLIENT_FIELD_FANTASY_DESC">
+				<field name="register-require_fantasy" type="list" label="PLG_USER_EXTENDED_FIELD_FANTASY_LABEL" description="PLG_USER_EXTENDED_FIELD_FANTASY_DESC">
 					<option value="2">JOPTION_REQUIRED</option>
 					<option value="1">JOPTION_OPTIONAL</option>
 					<option value="0">JDISABLED</option>
 				</field>
-				<field name="register-require_cnpj" type="list" label="PLG_USER_CLIENT_FIELD_CNPJ_LABEL" description="PLG_USER_CLIENT_FIELD_CNPJ_DESC">
+				<field name="register-require_cnpj" type="list" label="PLG_USER_EXTENDED_FIELD_CNPJ_LABEL" description="PLG_USER_EXTENDED_FIELD_CNPJ_DESC">
 					<option value="2">JOPTION_REQUIRED</option>
 					<option value="1">JOPTION_OPTIONAL</option>
 					<option value="0">JDISABLED</option>
 				</field>
-				<field name="register-require_ie" type="list" label="PLG_USER_CLIENT_FIELD_IE_LABEL" description="PLG_USER_CLIENT_FIELD_IE_DESC">
+				<field name="register-require_ie" type="list" label="PLG_USER_EXTENDED_FIELD_IE_LABEL" description="PLG_USER_EXTENDED_FIELD_IE_DESC">
 					<option value="2">JOPTION_REQUIRED</option>
 					<option value="1">JOPTION_OPTIONAL</option>
 					<option value="0">JDISABLED</option>
 				</field>
-				<field name="register-require_phone2" type="list" label="PLG_USER_CLIENT_FIELD_PHONE_LABEL" description="PLG_USER_CLIENT_FIELD_PHONE_DESC">
+				<field name="register-require_phone2" type="list" label="PLG_USER_EXTENDED_FIELD_PHONE_LABEL" description="PLG_USER_EXTENDED_FIELD_PHONE_DESC">
 					<option value="2">JOPTION_REQUIRED</option>
 					<option value="1">JOPTION_OPTIONAL</option>
 					<option value="0">JDISABLED</option>
 				</field>
-				<field name="register-require_website" type="list" label="PLG_USER_CLIENT_FIELD_WEBSITE_LABEL" description="PLG_USER_CLIENT_FIELD_WEBSITE_DESC">
+				<field name="register-require_website" type="list" label="PLG_USER_EXTENDED_FIELD_WEBSITE_LABEL" description="PLG_USER_EXTENDED_FIELD_WEBSITE_DESC">
 					<option value="2">JOPTION_REQUIRED</option>
 					<option value="1">JOPTION_OPTIONAL</option>
 					<option value="0">JDISABLED</option>
 				</field>
 				<field name="spacer1" type="spacer" hr="true" />
-				<field name="profile-require-user" type="spacer" class="text" label="PLG_USER_CLIENT_FIELD_NAME_PROFILE_REQUIRE_USER" />
-				<field name="profile-require_type" type="list" label="PLG_USER_CLIENT_FIELD_TYPE_LABEL" description="PLG_USER_CLIENT_FIELD_TYPE_DESC">
+				<field name="profile-require-user" type="spacer" class="text" label="PLG_USER_EXTENDED_FIELD_NAME_PROFILE_REQUIRE_USER" />
+				<field name="profile-require_type" type="list" label="PLG_USER_EXTENDED_FIELD_TYPE_LABEL" description="PLG_USER_EXTENDED_FIELD_TYPE_DESC">
 					<option value="2">JOPTION_REQUIRED</option>
 					<option value="1">JOPTION_OPTIONAL</option>
 					<option value="0">JDISABLED</option>
 				</field>
-				<field name="profile-require_cpf" type="list" label="PLG_USER_CLIENT_FIELD_CPF_LABEL" description="PLG_USER_CLIENT_FIELD_CPF_DESC">
+				<field name="profile-require_cpf" type="list" label="PLG_USER_EXTENDED_FIELD_CPF_LABEL" description="PLG_USER_EXTENDED_FIELD_CPF_DESC">
 					<option value="2">JOPTION_REQUIRED</option>
 					<option value="1">JOPTION_OPTIONAL</option>
 					<option value="0">JDISABLED</option>
 				</field>
-				<field name="profile-require_sex" type="list" label="PLG_USER_CLIENT_FIELD_SEX_LABEL" description="PLG_USER_CLIENT_FIELD_SEX_DESC">
+				<field name="profile-require_sex" type="list" label="PLG_USER_EXTENDED_FIELD_SEX_LABEL" description="PLG_USER_EXTENDED_FIELD_SEX_DESC">
 					<option value="2">JOPTION_REQUIRED</option>
 					<option value="1">JOPTION_OPTIONAL</option>
 					<option value="0">JDISABLED</option>
 				</field>
-				<field name="profile-require_birthday" type="list" label="PLG_USER_CLIENT_FIELD_BIRTHDAY_LABEL" description="PLG_USER_CLIENT_FIELD_BIRTHDAY_DESC">
+				<field name="profile-require_birthday" type="list" label="PLG_USER_EXTENDED_FIELD_BIRTHDAY_LABEL" description="PLG_USER_EXTENDED_FIELD_BIRTHDAY_DESC">
 					<option value="2">JOPTION_REQUIRED</option>
 					<option value="1">JOPTION_OPTIONAL</option>
 					<option value="0">JDISABLED</option>
 				</field>
-				<field name="profile-require_phone" type="list" label="PLG_USER_CLIENT_FIELD_PHONE_LABEL" description="PLG_USER_CLIENT_FIELD_PHONE_DESC">
+				<field name="profile-require_phone" type="list" label="PLG_USER_EXTENDED_FIELD_PHONE_LABEL" description="PLG_USER_EXTENDED_FIELD_PHONE_DESC">
 					<option value="2">JOPTION_REQUIRED</option>
 					<option value="1">JOPTION_OPTIONAL</option>
 					<option value="0">JDISABLED</option>
 				</field>
-				<field name="profile-require_mobile" type="list" label="PLG_USER_CLIENT_FIELD_MOBILE_LABEL" description="PLG_USER_CLIENT_FIELD_MOBILE_DESC">
+				<field name="profile-require_mobile" type="list" label="PLG_USER_EXTENDED_FIELD_MOBILE_LABEL" description="PLG_USER_EXTENDED_FIELD_MOBILE_DESC">
 					<option value="2">JOPTION_REQUIRED</option>
 					<option value="1">JOPTION_OPTIONAL</option>
 					<option value="0">JDISABLED</option>
 				</field>
-				<field name="profile-require_address_zip_code" type="list" label="PLG_USER_CLIENT_FIELD_ZIP_CODE_LABEL" description="PLG_USER_CLIENT_FIELD_ZIP_CODE_DESC">
+				<field name="profile-require_address_zip_code" type="list" label="PLG_USER_EXTENDED_FIELD_ZIP_CODE_LABEL" description="PLG_USER_EXTENDED_FIELD_ZIP_CODE_DESC">
 					<option value="2">JOPTION_REQUIRED</option>
 					<option value="1">JOPTION_OPTIONAL</option>
 					<option value="0">JDISABLED</option>
 				</field>
-				<field name="profile-require_address_street" type="list" label="PLG_USER_CLIENT_FIELD_STREET_LABEL" description="PLG_USER_CLIENT_FIELD_STREET_DESC">
+				<field name="profile-require_address_street" type="list" label="PLG_USER_EXTENDED_FIELD_STREET_LABEL" description="PLG_USER_EXTENDED_FIELD_STREET_DESC">
 					<option value="2">JOPTION_REQUIRED</option>
 					<option value="1">JOPTION_OPTIONAL</option>
 					<option value="0">JDISABLED</option>
 				</field>
-				<field name="profile-require_address_number" type="list" label="PLG_USER_CLIENT_FIELD_NUMBER_LABEL" description="PLG_USER_CLIENT_FIELD_NUMBER_DESC">
+				<field name="profile-require_address_number" type="list" label="PLG_USER_EXTENDED_FIELD_NUMBER_LABEL" description="PLG_USER_EXTENDED_FIELD_NUMBER_DESC">
 					<option value="2">JOPTION_REQUIRED</option>
 					<option value="1">JOPTION_OPTIONAL</option>
 					<option value="0">JDISABLED</option>
 				</field>
-				<field name="profile-require_address_district" type="list" label="PLG_USER_CLIENT_FIELD_DISTRICT_LABEL" description="PLG_USER_CLIENT_FIELD_DISTRICT_DESC">
+				<field name="profile-require_address_district" type="list" label="PLG_USER_EXTENDED_FIELD_DISTRICT_LABEL" description="PLG_USER_EXTENDED_FIELD_DISTRICT_DESC">
 					<option value="2">JOPTION_REQUIRED</option>
 					<option value="1">JOPTION_OPTIONAL</option>
 					<option value="0">JDISABLED</option>
 				</field>
-				<field name="profile-require_address_city" type="list" label="PLG_USER_CLIENT_FIELD_CITY_LABEL" description="PLG_USER_CLIENT_FIELD_CITY_DESC">
+				<field name="profile-require_address_city" type="list" label="PLG_USER_EXTENDED_FIELD_CITY_LABEL" description="PLG_USER_EXTENDED_FIELD_CITY_DESC">
 					<option value="2">JOPTION_REQUIRED</option>
 					<option value="1">JOPTION_OPTIONAL</option>
 					<option value="0">JDISABLED</option>
 				</field>
-				<field name="profile-require_address_state" type="list" label="PLG_USER_CLIENT_FIELD_STATE_LABEL" description="PLG_USER_CLIENT_FIELD_STATE_DESC">
+				<field name="profile-require_address_state" type="list" label="PLG_USER_EXTENDED_FIELD_STATE_LABEL" description="PLG_USER_EXTENDED_FIELD_STATE_DESC">
 					<option value="2">JOPTION_REQUIRED</option>
 					<option value="1">JOPTION_OPTIONAL</option>
 					<option value="0">JDISABLED</option>
 				</field>
-				<field name="profile-require_company" type="list" label="PLG_USER_CLIENT_FIELD_COMPANY_LABEL" description="PLG_USER_CLIENT_FIELD_COMPANY_DESC">
+				<field name="profile-require_company" type="list" label="PLG_USER_EXTENDED_FIELD_COMPANY_LABEL" description="PLG_USER_EXTENDED_FIELD_COMPANY_DESC">
 					<option value="2">JOPTION_REQUIRED</option>
 					<option value="1">JOPTION_OPTIONAL</option>
 					<option value="0">JDISABLED</option>
 				</field>
-				<field name="profile-require_fantasy" type="list" label="PLG_USER_CLIENT_FIELD_FANTASY_LABEL" description="PLG_USER_CLIENT_FIELD_FANTASY_DESC">
+				<field name="profile-require_fantasy" type="list" label="PLG_USER_EXTENDED_FIELD_FANTASY_LABEL" description="PLG_USER_EXTENDED_FIELD_FANTASY_DESC">
 					<option value="2">JOPTION_REQUIRED</option>
 					<option value="1">JOPTION_OPTIONAL</option>
 					<option value="0">JDISABLED</option>
 				</field>
-				<field name="profile-require_cnpj" type="list" label="PLG_USER_CLIENT_FIELD_CNPJ_LABEL" description="PLG_USER_CLIENT_FIELD_CNPJ_DESC">
+				<field name="profile-require_cnpj" type="list" label="PLG_USER_EXTENDED_FIELD_CNPJ_LABEL" description="PLG_USER_EXTENDED_FIELD_CNPJ_DESC">
 					<option value="2">JOPTION_REQUIRED</option>
 					<option value="1">JOPTION_OPTIONAL</option>
 					<option value="0">JDISABLED</option>
 				</field>
-				<field name="profile-require_ie" type="list" label="PLG_USER_CLIENT_FIELD_IE_LABEL" description="PLG_USER_CLIENT_FIELD_IE_DESC">
+				<field name="profile-require_ie" type="list" label="PLG_USER_EXTENDED_FIELD_IE_LABEL" description="PLG_USER_EXTENDED_FIELD_IE_DESC">
 					<option value="2">JOPTION_REQUIRED</option>
 					<option value="1">JOPTION_OPTIONAL</option>
 					<option value="0">JDISABLED</option>
 				</field>
-				<field name="profile-require_phone2" type="list" label="PLG_USER_CLIENT_FIELD_PHONE_LABEL" description="PLG_USER_CLIENT_FIELD_PHONE_DESC">
+				<field name="profile-require_phone2" type="list" label="PLG_USER_EXTENDED_FIELD_PHONE_LABEL" description="PLG_USER_EXTENDED_FIELD_PHONE_DESC">
 					<option value="2">JOPTION_REQUIRED</option>
 					<option value="1">JOPTION_OPTIONAL</option>
 					<option value="0">JDISABLED</option>
 				</field>
-				<field name="profile-require_website" type="list" label="PLG_USER_CLIENT_FIELD_WEBSITE_LABEL" description="PLG_USER_CLIENT_FIELD_WEBSITE_DESC">
+				<field name="profile-require_website" type="list" label="PLG_USER_EXTENDED_FIELD_WEBSITE_LABEL" description="PLG_USER_EXTENDED_FIELD_WEBSITE_DESC">
 					<option value="2">JOPTION_REQUIRED</option>
 					<option value="1">JOPTION_OPTIONAL</option>
 					<option value="0">JDISABLED</option>
